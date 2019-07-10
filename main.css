@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: linear-gradient(to right top, #fef6ff, #ffeff3, #faebe6, #f0e7dc, #e1e5d8);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid;
+    border-bottom-color: lightgrey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#displayinline {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
+#searchInput {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+
+img {
+    height: 480px;
+    width: 320px;
+    border: 5px solid;
+    border-color: black;
+}
+
+.single-book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#moreInfo {
+    color: red;
+    font-weight: bold;
+}
+
+.flip-container {
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    border: 5px solid;
+    transform: rotateY(180deg);
+    background: linear-gradient(to right top, #f4f09d, #f1f4a1, #edf8a6, #eafbab, #e6ffb0);
+}
+
+button {
+    background-color: #e50000;
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.likeFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.bookDescription {
+    font-size: 20px;
+    margin: 15px;
+}
+
+.emptySpace {
+    padding-left: 20px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
